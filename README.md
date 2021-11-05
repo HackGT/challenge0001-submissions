@@ -12,7 +12,7 @@ Here are some resources to get you started:
 
 **Do not submit source code from an existing CSS art piece. You will be disqualified.**
 
-The winner will be determined by the HexCommons team. We will record a short-video showcasing the top 5 submissions.
+The winner will be determined by the HexLabs team. We will record a short-video showcasing the top 5 submissions.
 
 ## Deadline
 
