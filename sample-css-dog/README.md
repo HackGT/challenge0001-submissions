@@ -1,4 +1,4 @@
-# A dog
+# dog
 
 CSS Dog
 
