@@ -14,6 +14,10 @@ Here are some resources to get you started:
 
 The winner will be determined by the HexCommons team. We will record a short-video showcasing the top 5 submissions.
 
+## Deadline
+
+11:59pm EST, November 11, 2021
+
 ## What to submit?
 
 You have to submit the following files:
