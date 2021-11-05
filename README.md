@@ -8,7 +8,7 @@ For our very first challenge, we want you to create art using only CSS. While yo
 Here are some resources to get you started:
 - https://dev.to/poulamic/intro-to-creating-css-art-1ep5
 - https://developer.mozilla.org/en-US/docs/Web/CSS
-- [Sample submission](sample)
+- [Sample submission](sample-css-dog)
 
 **Do not submit source code from an existing CSS art piece. You will be disqualified.**
 
