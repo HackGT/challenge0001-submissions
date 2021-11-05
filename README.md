@@ -22,7 +22,7 @@ The winner will be determined by the HexCommons team. We will record a short-vid
 
 You have to submit the following files:
 - Any source code you used/wrote to complete the challenge
-- A README describing how to build your project
+- A README detailing who worked on the project (name and email) and how to build it
 - A PNG of your art
 
 ## How to submit?
