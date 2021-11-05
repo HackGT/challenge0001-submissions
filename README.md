@@ -3,7 +3,7 @@ CSS art :0
 
 ## Description
 
-For our very first challenge, we want you to create art using only CSS. While you can use a scripting language to auto-generate CSS, no language other than CSS can be used to render your masterpiece.
+For our very first challenge, we want you to create art **using only CSS**. While you can use a scripting language to auto-generate CSS, no language other than CSS can be used to render your masterpiece. You are allowed to use CSS frameworks like [sass](https://sass-lang.com/).
 
 Here are some resources to get you started:
 - https://dev.to/poulamic/intro-to-creating-css-art-1ep5
