@@ -1,0 +1,142 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: coral;
+}
+
+.container {
+    height: 500px;
+    width: 500px;
+    border: 3px solid white;
+}
+
+.head {
+    position: relative;
+    background: white;
+    z-index: 1000;
+    width: 160px;
+    height:150px;
+    top: 160px;
+    left: 170px;
+    border-radius: 120% 120% 0% 0%;
+}
+
+.head::before {
+    content: "";
+    display: block;
+    background: black;
+    transform: translate(30px, 65px);
+    width: 20px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.head::after {
+    content: "";
+    display: block;
+    background: black;
+    transform: translate(105px, 35px);
+    width: 20px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ear1, .ear2 {
+    position: absolute;
+    z-index: 800;
+    height: 100px;
+    width: 100px;
+    background: #e69a60;
+    border-radius: 105% 10% 10% 10%;
+    border: 3px solid #b37647;
+}
+
+.ear1 {
+    top: 170px;
+    left: 120px;
+    transform: rotate(-10deg);
+}
+
+.ear2 {
+    top: 170px;
+    left: 280px;
+    transform: rotate(100deg);   
+}
+
+.cheek {
+    position: relative;
+    z-index: 1000;
+    height: 100px;
+    width: 100px;
+    background: coral;
+    border-radius: 100%;
+    box-shadow: 160px 100px #FEFDFC,
+        240px 100px #FEFDFC;
+}
+
+.cheek::before {
+    content: "";
+    display: block;
+    background: radial-gradient(ellipse at center, #666666 0%,#111111 99%);;
+    width: 50px;
+    height: 30px;
+    border-radius: 70% 70% 60% 60%;
+    transform: translate(225px, 122px);
+}
+
+.cheek::after {
+    content: "";
+    display: block;
+    transform: translate(235px, 105px);
+
+    width: 30px;
+    height: 30px;
+    border-radius: 0 0 50% 50%
+}
+
+.freckles {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: grey;
+    border-radius: 100%;
+    left: 200px;
+    top: 150px;
+    box-shadow: 90px 0px grey,
+        82px 10px grey,
+        98px 10px grey;
+}
+
+.freckles::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: grey;
+    border-radius: 100%;
+    left: -8px;
+    top: 10px;
+}
+
+.freckles::after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: grey;
+    border-radius: 100%;
+    left: 8px;
+    top: 10px;
+}
+
+.tongue {
+    background: #ff7373;
+    position: relative;
+    z-index: 999;
+    top: 60px;
+    left: 232px;
+    width: 35px;
+    height: 50px;
+    border-radius: 0 0 35% 35%;
+    border: 3px solid #eb4646;
+}
