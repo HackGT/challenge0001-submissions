@@ -1,0 +1,254 @@
+html, body {
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+}
+
+:root {
+    --orbit-distance-1: 100px;
+}
+
+#coin {
+    background-color: gold;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    animation: axis-rotation linear infinite 1s;
+    animation-delay: 1s;
+}
+
+.coin-indent {
+    width: 10px;
+    height: 25px;
+    background-color: rgb(226, 155, 0);
+}
+
+.block {
+    background-color: #995c00;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%)
+}
+
+.beedell-wrapper {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 100px;
+    height: 75px;
+    animation: bee-sit linear 1s;
+    animation-iteration-count: 1;
+}
+
+.beedell {
+    width: 100px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.beedell-stripes {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.beedell-stripes > :nth-child(2n) {
+    height: 100%;
+    width: 100%;
+    background-color: #898bff;
+}
+
+.beedell-stripes > :nth-child(2n + 1) {
+    width: 100%;
+    height: 100%;
+    background-color: #595cff;
+}
+
+.beedell-face {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: #595cff;
+    justify-content: center;
+}
+
+.beedell-eye {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2px
+}
+
+.eyeball {
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 7.5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.shine {
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+}
+
+.stinger {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-75%, -50%);
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right: 10px solid silver;
+    z-index: -1;
+}
+
+.wing-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateZ(10deg) translate(-120%, -160%);
+    width: 50px;
+    height: 30px;
+    background: rgba(184, 184, 184, 0.8);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.wing-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: rotateZ(30deg) translate(-110%, -140%);
+    width: 50px;
+    height: 30px;
+    background: rgba(223, 223, 223, 0.6);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: -1;
+}
+
+.hat {
+    position: absolute;
+    top: 0;
+    left: 60%;
+    transform: rotateZ(20deg) translate(-10%, -40%)
+}
+
+.hat-top {
+    width: 40px;
+    height: 20px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hat-brim {
+    width: 60px;
+    height: 2px;
+    background-color: red;
+    border-top-right-radius: 15px 1.5px;
+    border-bottom-right-radius: 15px 0.5px;
+}
+
+.hat-insig {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 12px;
+    border-radius: 50%;
+    padding: 1px;
+    background-color: white;
+}
+
+.hat-insig-text {
+    color: red;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+.block-grid-1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 25%;
+}
+
+.block-grid-2 {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
+    height: 25%;
+}
+
+.block-grid-1 > div, .block-grid-2 > div {
+    border: 3px black solid
+}
+
+@keyframes bee-sit {
+    0% {
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+    100% {
+        top: 41%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+    }
+}
+
+@keyframes axis-rotation {
+    0% {
+        transform: translate(-50%, 20%) rotateY(0deg);
+        opacity: 1;
+    }
+    80% {
+        transform: translate(-50%, -280%) rotateY(1080deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -280%) rotateY(1080deg);
+        opacity: 0;
+    }
+}
