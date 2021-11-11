@@ -35,6 +35,6 @@ and the GT primary colors as described at
 
 ## scrot
 
-![image](https://user-images.githubusercontent.com/621412/141276649-bdf49b0b-67cb-4ac8-afea-99a75a55d323.png)
+![image](https://user-images.githubusercontent.com/621412/141294590-06d8942b-b0ae-4796-88ee-5de65f341c22.png)
 
-![image](https://user-images.githubusercontent.com/621412/141276790-68ea05ad-4f1c-4965-b60f-e81ea340fa4e.png)
+![image](https://user-images.githubusercontent.com/621412/141294784-1317fd95-66e8-4cb4-a81a-9110188d5784.png)
