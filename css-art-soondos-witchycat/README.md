@@ -2,5 +2,5 @@ This is my submission for HackGT's challenge. Originally I was just using CSS, b
 
 You can find the live codepen here: https://codepen.io/soondosm/pen/vYJrvXK?editors=1100
 
-![alt text](https://github.com/Soondosm/challenge0001-submissions/css-art-soondos-witchycat/witchycat.gif?raw=true)
+![alt text](https://github.com/Soondosm/challenge0001-submissions/blob/main/css-art-soondos-witchycat/witchycat.gif?raw=true)
 
