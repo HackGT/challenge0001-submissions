@@ -19,6 +19,7 @@ $pumpkin2:#788F62;
 $stem:#004B3D;
 $stem-highlight:#FCFCD4;
 $pumpkin-highlight:#CEB7A1;
+$windcolor: gray;
 
 body{
   background: black;
@@ -55,6 +56,39 @@ body{
     overflow:clip;
     background: $soil;
   }
+}
+
+.wind1, .wind2, .wind3 {
+  position: absolute;
+  height:10vmin;
+  width:40vmin;
+  border-radius: 89% 31% 18% 72% / 98% 55% 45% 12%;
+  background:transparent;
+  border-top: 1vmin solid $stars;
+  transform:rotate(-45deg);
+  animation: windwipe $duration linear infinite both;
+  // animation-delay: 7s;
+
+}
+.wind1{
+  top:5vmin;
+}
+
+.wind2{
+  position: absolute;
+  transform:rotate(-235deg);
+  left:-9vmin;
+  top:54vmin;
+  animation: windwipe2 $duration linear infinite both;
+}
+
+.wind3 {
+  width:90vmin;
+  position:absolute;
+  transform:rotate(-40deg);
+  left:-20vmin;
+  top:20vmin;
+  animation:windwipe3 $duration linear infinite both;
 }
 
 .pumpkin1{
@@ -161,6 +195,8 @@ body{
   left:-7vmin;
   position: relative;
   background:none;
+  transform-origin:bottom center;
+  // transform:rotate(-10deg);
 }
 
 .witchhat-base {
@@ -171,6 +207,8 @@ body{
   background: $hatcolor;
   position: absolute;
   z-index:-1;
+  transform-origin:bottom center;
+  animation: hatsway $duration linear infinite both;
 }
 
 .witchhat-base::before {
@@ -194,6 +232,8 @@ body{
   z-index:20;
   border-radius:30% 90%;
   transform:rotate(1deg);
+  transform-origin:bottom center;
+  animation: hatsway $duration linear infinite both;
   &:before{
     position:absolute;
     width:70vmin;
@@ -216,6 +256,8 @@ body{
   top:-20vmin;
   left:10vmin;
   border-radius: 89% 31% 18% 72% / 98% 55% 45% 12%;
+  transform-origin:bottom center;
+  animation: tipsway $duration linear infinite both;
   &:before{
     content:"";
     position:absolute;
@@ -529,9 +571,101 @@ clip-path: polygon(50% 0%, 71% 50%, 50% 100%, 29% 50%);
     }
  
 @function swing-rotate($val) {
-  @return rotate($val * 2deg);
+  @return rotate($val * 2deg)
+}
+  
+  
+@keyframes swing-tail {
+  @include swing(-.1);
 }
 
+@keyframes windwipe {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  25% {
+    clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+  }
+  35% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+}
+
+@keyframes windwipe2 {
+  0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  30% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  50% {
+    clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+  }
+  75% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
+@keyframes windwipe3 {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  27% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+  28% {
+    clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
+  }
+  35% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  40% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  }
+}
+
+@keyframes hatsway {
+  0% {
+    transform:rotate(0deg);
+  }
+  25%{
+    // right:2vmin;
+    transform:rotate(4deg);
+  }
+  28% {
+    // right:-2vmin;
+    transform:rotate(-4deg);
+  }
+  37% {
+    transform:rotate(0deg);
+  }
+  100% { transform:rotate(0deg);}
+}
+
+@keyframes tipsway {
+  0%{
+    transform:scaleX(100%) rotate(0deg);
+  }
+  28%{
+    transform:scaleX(100%) rotate(0deg);
+  }
+  31%{
+    transform:scaleX(0.9) rotate(-4deg);
+  }
+  34%{
+    transform:scaleX(1.0) rotate(0deg);
+  }
+  100%{transform:scaleX(1.0) rotate(0deg);}
+}
 
 @keyframes blink {
   from, to, 7%, 23%, 78% {
@@ -544,10 +678,6 @@ clip-path: polygon(50% 0%, 71% 50%, 50% 100%, 29% 50%);
     background: $shadowcat;
   }
 }
-
-@keyframes swing-tail {
-    @include swing(-.1);
-  }
 
 @media all and (max-width: 600px) {
   .box{
