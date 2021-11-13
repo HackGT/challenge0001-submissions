@@ -1,0 +1,167 @@
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+:root {
+
+    --owlX: 13em;
+    --owlY: 8em;
+    --owlWidth:  16em;
+    --owlHeight: 20em;
+
+    /*--owlHead: rgba(53,178,211,1);*/
+    --owlHead: rgba(69, 64, 62,1);
+    --owlHeadT: rgba(69, 64, 62,0);
+
+    --owlSclera: rgba(255,255,255,1);
+    --owlScleraT: rgba(255,255,255,0);
+
+    --owlCornea: rgba(62,33,16,1);
+    --owlCorneaT: rgba(62,33,16,0);
+
+    --owlNoseLeft: rgba(233,151,15,1);
+    --owlNoseLeftT: rgba(233,151,15,0);
+
+    --owlNoseRight: rgba(248,201,6,1);
+    --owlNoseRightT: rgba(248,201,6,0);
+
+    /*--owlBody: rgba(31,99,154,1);*/
+    --owlBody: rgba(38,38,38,1);
+    --owlBodyT: rgba(38,38,38,0);
+
+    /*--owlBody1: rgba(0,134,180,1);*/
+    --owlBody1: rgba(56, 54, 52, 1);
+    --owlBodyT1: rgba(56, 54, 52,0);
+
+    --owlLegs: rgba(235,206,13,1);
+    --owlLegsT: rgba(235,206,13,0);
+
+    --eyeReflection: rgba(255,253,243,1);
+    --eyeReflectionT: rgba(255,253,243,0);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.owl {
+    height: 40em;
+    width: 40em;
+
+    font-size: 10px;
+    background:
+
+        /**
+         * Owl Bounding Box
+         * ---
+         */
+        linear-gradient(rgba(0,0,0,0) 95%, rgba(0,0,0,0) 100%) var(--owlX) var(--owlY) / var(--owlWidth) var(--owlHeight),
+
+        /**
+         * Hair
+         * ---
+         **/
+        radial-gradient(100% 100% at center, var(--owlHead) 49.9%, var(--owlHeadT) 50%) calc(var(--owlX) + 5.55em) calc(var(--owlY) + 0.15em) / 1.25em 1.25em,
+        linear-gradient(45deg, var(--owlHeadT) 35%, var(--owlHead) 35%, var(--owlHead) 63%, var(--owlHeadT) 63%) calc(var(--owlX) + 5.9em) calc(var(--owlY) + 0.5em) / 3em 3em,
+
+        radial-gradient(100% 100% at center, var(--owlHead) 49.9%, var(--owlHeadT) 50%) calc(var(--owlX) + 9em) calc(var(--owlY) + 0.15em) / 1.25em 1.25em,
+        linear-gradient(135deg, var(--owlHeadT) 35%, var(--owlHead) 35%, var(--owlHead) 63%, var(--owlHeadT) 63%) calc(var(--owlX) + 6.9em) calc(var(--owlY) + 0.5em) / 3em 3em,
+
+        /**
+         * Eye Reflection
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--eyeReflection) 49.95%, var(--eyeReflectionT) 50%) calc(var(--owlX) + 3.45em) calc(var(--owlY) + 7.15em) / 1.25em 1.25em,
+        radial-gradient(100% 100% at center, var(--eyeReflection) 49.95%, var(--eyeReflectionT) 50%) calc(var(--owlX) + 10.85em) calc(var(--owlY) + 7.15em) / 1.25em 1.25em,
+
+        /**
+         * Left Cornea
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlCornea) 48%, var(--owlCorneaT) 50%) calc(var(--owlX) + 3.25em) calc(var(--owlY) + 6.75em) / 2.5em 2.5em,
+
+        /**
+         * Right Cornea
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlCornea) 48%, var(--owlCorneaT) 50%) calc(var(--owlX) + 10.5em) calc(var(--owlY) + 6.75em) / 2.5em 2.5em,
+
+        /**
+         * Right Sclera
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlSclera) 48%, var(--owlScleraT) 50%) calc(var(--owlX) + 7.75em) calc(var(--owlY) + 4.15em) / 7.75em 7.75em,
+
+        /**
+         * Left Sclera
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlSclera) 48%, var(--owlScleraT) 50%) calc(var(--owlX) + 0.75em) calc(var(--owlY) + 4.15em) / 7.75em 7.75em,
+
+        /**
+         * Nose
+         * ---
+         */
+        linear-gradient(45deg, var(--owlNoseLeftT) 49%, var(--owlNoseLeft) 50%) calc(var(--owlX) + 5.15em) calc(var(--owlY) + 9.5em) / 3em 3em,
+        linear-gradient(135deg, var(--owlNoseRight) 49%, var(--owlNoseRightT) 50%) calc(var(--owlX) + 8.15em) calc(var(--owlY) + 9.5em) / 3em 3em,
+
+
+        /**
+         * Left Eye Socket
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlHead) 49.75%, var(--owlHeadT) 50%) calc(var(--owlX) + 0.25em) calc(var(--owlY) + 3.75em) / 8.5em 8.5em,
+
+        /**
+         * Right Eye Socket
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlHead) 49.75%, var(--owlHeadT) 50%) calc(var(--owlX) + 7.5em) calc(var(--owlY) + 3.75em) / 8.5em 8.5em,
+
+        /**
+         * Head
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlHead) 49%, var(--owlHeadT) 50%) calc(var(--owlX) + 1.5em) calc(var(--owlY) + 2em) / 13em 13em,
+
+        /**
+         * Owl Body 1
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlBody1) 49%, var(--owlBodyT1) 50%) calc(var(--owlX) + 3.75em) calc(var(--owlY) + 10.25em) / 8.5em 8.5em,
+
+        /**
+         * Owl Body
+         * ---
+         */
+        radial-gradient(100% 100% at center, var(--owlBody) 49%, var(--owlBodyT) 50%) calc(var(--owlX) + 1.5em) calc(var(--owlY) + 4.5em) / 13em 13em,
+
+        /**
+         * Left Leg
+         * ---
+         **/
+        linear-gradient(var(--owlLegs) 95%, var(--owlLegs) 95%) calc(var(--owlX) + 5.1em) calc(var(--owlY) + 17em) / 1.25em 2em,
+        radial-gradient(100% 100% at 50% 0%, var(--owlLegs) 49%, var(--owlLegsT) 50%) calc(var(--owlX) + 5.1em) calc(var(--owlY) + 19em) / 1.25em 1.25em,
+
+        /**
+         * Right Leg
+         * ---
+         **/
+        linear-gradient(var(--owlLegs) 95%, var(--owlLegs) 95%) calc(var(--owlX) + 9.75em) calc(var(--owlY) + 17em) / 1.25em 2em,
+        radial-gradient(100% 100% at 50% 0%, var(--owlLegs) 49%, var(--owlLegsT) 50%) calc(var(--owlX) + 9.75em) calc(var(--owlY) + 19em) / 1.25em 1.25em,
+
+        linear-gradient(rgba(255, 255, 255,1) 90%, rgba(255, 255, 255,1) 90%) 0em 0em / 130em 80em,
+        url('efx.png') -16em -16em
+        ;
+    background-repeat: no-repeat;
+}
+
