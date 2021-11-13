@@ -1,4 +1,22 @@
 
+@keyframes owleyeblinkleft {
+    from {
+        clip-path: circle(0.65% at 84% 20%);
+    }
+    to {
+        clip-path: ellipse(0.65% 0.05% at 84% 20%);
+    }
+}
+
+@keyframes owleyeblinkright {
+    from {
+        clip-path: circle(0.65% at 86% 20%);
+    }
+    to {
+        clip-path: ellipse(0.65% 0.05% at 86% 20%);
+    }
+}
+
 .owl {
     font-size: 10px;
     background-color: transparent !important;
@@ -49,13 +67,15 @@
 }
 
 .eye-left-cornea {
-    clip-path: circle(0.5% at 84% 20%);
+    clip-path: circle(0.65% at 84% 20%);
     background-color: var(--owlCornea) !important;
+    animation: owleyeblinkleft 4s infinite;
 }
 
 .eye-right-cornea {
-    clip-path: circle(0.5% at 86% 20%);
+    clip-path: circle(0.65% at 86% 20%);
     background-color: var(--owlCornea) !important;
+    animation: owleyeblinkright 4s infinite;
 }
 
 .eye-left-eye-reflection {
