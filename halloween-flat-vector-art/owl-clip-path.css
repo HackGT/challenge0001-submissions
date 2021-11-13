@@ -1,0 +1,120 @@
+
+@keyframes owleyeblinkleft {
+    from {
+        clip-path: circle(0.65% at 84% 20%);
+    }
+    to {
+        clip-path: ellipse(0.65% 0.05% at 84% 20%);
+    }
+}
+
+@keyframes owleyeblinkright {
+    from {
+        clip-path: circle(0.65% at 86% 20%);
+    }
+    to {
+        clip-path: ellipse(0.65% 0.05% at 86% 20%);
+    }
+}
+
+.owl {
+    font-size: 10px;
+    background-color: transparent !important;
+}
+
+.owl div {
+    z-index: 30;
+}
+
+.head {
+    clip-path: circle(2.5% at 85% 20.5%);
+    background-color: var(--owlHead) !important;
+    z-index: 20 !important;
+}
+
+.body {
+    clip-path: circle(2% at 85% 24%);
+    background-color: var(--owlBody1) !important;
+    z-index: 19 !important;
+}
+
+.body-1 {
+    clip-path: circle(2.5% at 85% 22.5%);
+    background-color: var(--owlBody) !important;
+    z-index: 18 !important;
+}
+
+.eye-left-socket {
+    clip-path: circle(1.75% at 84% 20%);
+    background-color: var(--owlHead) !important;
+    z-index: 21 !important;
+}
+
+.eye-right-socket {
+    clip-path: circle(1.75% at 86% 20%);
+    background-color: var(--owlHead) !important;
+    z-index: 21 !important;
+}
+
+.eye-left-sclera {
+    clip-path: circle(1.35% at 84% 20%);
+    background-color: var(--owlSclera) !important;
+}
+
+.eye-right-sclera {
+    clip-path: circle(1.35% at 86% 20%);
+    background-color: var(--owlSclera) !important;
+}
+
+.eye-left-cornea {
+    clip-path: circle(0.65% at 84% 20%);
+    background-color: var(--owlCornea) !important;
+    animation: owleyeblinkleft 4s infinite;
+}
+
+.eye-right-cornea {
+    clip-path: circle(0.65% at 86% 20%);
+    background-color: var(--owlCornea) !important;
+    animation: owleyeblinkright 4s infinite;
+}
+
+.eye-left-eye-reflection {
+    clip-path: circle(0.2% at 83.85% 19.9%);
+    background-color: var(--eyeReflection) !important;
+}
+
+.eye-right-eye-reflection {
+    clip-path: circle(0.2% at 85.9% 19.9%);
+    background-color: var(--eyeReflection) !important;
+}
+
+.left-nose {
+    clip-path: polygon(84.65% 21%, 85.1% 21%, 85.1% 22%);
+    background-color: var(--owlNoseLeft) !important;
+    z-index: 22 !important;
+}
+
+.right-nose {
+    clip-path: polygon(85.1% 21%, 85.55% 21%, 85.1% 22%);
+    background-color: var(--owlNoseRight) !important;
+    z-index: 22 !important;
+}
+
+.left-leg {
+    clip-path: polygon(84% 28%, 84.35% 28%, 84.35% 25%, 84% 25%);
+    background-color: var(--owlLegs) !important;
+    z-index: 17 !important;
+}
+
+.right-leg {
+    clip-path: polygon(85.4% 28.45%, 85.75% 28.45%, 85.75% 25%, 85.4% 25%);
+    background-color: var(--owlLegs) !important;
+    z-index: 17 !important;
+}
+
+
+.hair {
+    clip-path: polygon(84% 16%, 84.5% 16%, 85% 17.5%, 85.5% 16%, 86% 16.25%, 85% 21%);
+    background-color: var(--owlHead) !important;
+    z-index: 17 !important;
+}
