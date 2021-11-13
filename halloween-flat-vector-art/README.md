@@ -15,7 +15,7 @@ or View at CodePen: [https://codepen.io/malik_/pen/GRvXLWJ](https://codepen.io/m
 # Screenshots
 
 ![Screenshot for Halloween Flat Vector Art](/halloween-flat-vector-art/screenshot.png?raw=true)
-![Screenshot for Halloween Flat Vector Art](/halloween-flat-vector-art/owl-gradient/screenshot-owl.png?raw=true)
+![Screenshot for Owl using linear and radial gradient](/halloween-flat-vector-art/owl-gradient/screenshot-owl.png?raw=true)
 
 # Author
 
