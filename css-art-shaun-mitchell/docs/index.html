@@ -1,0 +1,115 @@
+<style>
+  :root {
+    --hexagon: "⬣";
+    --color-primary: 179, 163, 105;
+    --color-secondary: 0, 48, 87;
+    --color-dark: 0, 0, 0;
+    --color-light: 200, 200, 200;
+  }
+
+  @font-face {
+    font-family: "Roobert";
+    src: url("fonts/Roobert-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+  }
+
+  @keyframes colorChange {
+    from { /* radial-gradient(farthest-corner at top right, ..) */
+      background-position: left top;
+      background-size:200% 100%;
+    
+    }
+    25% {
+      background-position:left top;  
+    }
+    50% { /* radial-gradient(farthest-corner at top center, ..) */
+      background-size:100% 100%;
+    }
+    75% {
+      background-position:right top; 
+    }
+    to { /* radial-gradient(farthest-corner at top left, ..) */
+      background-position:right top;
+      background-size:200% 100%;
+    }
+   }
+
+  html {
+    overflow: hidden;
+    font-family: Roobert, sans-serif;
+  }
+
+  body {
+    background: rgb(var(--color-dark));
+    /* dark */
+    background: radial-gradient(
+      farthest-corner at 0 -50vh,
+      rgba(var(--color-secondary), 1) 0%,
+      rgba(var(--color-primary), 0.6) 8%,
+      rgba(var(--color-dark), 0.75) 24.5%,
+      rgb(var(--color-dark)) 62.5%,
+      rgba(var(--color-secondary), 1) 100%);
+    /* light */
+    /*background: radial-gradient(*/
+    /*  farthest-corner at 0 -50vh,*/
+    /*  rgba(var(--color-secondary), 1) 0%,*/
+    /*  rgba(var(--color-dark), 0.6) 8%,*/
+    /*  rgba(var(--color-dark), 0.75) 34.5%,*/
+    /*  rgba(var(--color-primary), 0.85) 68.5%,*/
+    /*  rgba(var(--color-secondary), 1) 100%);*/
+    animation: colorChange 30s infinite alternate linear;
+  }
+
+  /*
+   * Hexagons
+   */
+  body::before, body::after {
+    color: rgba(0 0 0 /0.3);
+    content: var(--hexagon);
+    font-size: 100vmax;
+    position: absolute;
+  }
+
+  /* left hexagon */
+  body::before {
+    bottom: -25vh;
+    left: -15vmax;
+    color: rgba(var(--color-light), 0.3);
+    opacity: 0.3;
+  }
+  /* right hexagon */
+  body::after {
+    top: -30vh;
+    right: -15vmax;
+    color: rgba(var(--color-dark), 0.22);
+  }
+
+  /*
+   * Text
+   */
+  html::before, html::after {
+    font-size: 9em;
+    font-family: Roobert, sans-serif;
+    font-weight: 600;
+    text-shadow: 0 0 6vw rgba(var(--color-dark), .3);
+    mix-blend-mode: difference;
+    z-index: 10;
+  }
+
+  /* hex */
+  html::before {
+    content: "hex";
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    color: rgba(var(--color-primary), 0.75);
+  }
+  /* labs */
+  html::after {
+    content: "labs";
+    position: absolute;
+    bottom: 20vh;
+    right: 20vw;
+    color: rgba(var(--color-secondary), 0.75);
+  }
+</style>
