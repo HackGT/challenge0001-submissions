@@ -19,10 +19,13 @@ or View at CodePen: [https://codepen.io/malik_/pen/GRvXLWJ](https://codepen.io/m
 
 # Author
 
-Name: Malik Naik
-Email: [maliknaik16@gmail.com](mailto:maliknaik16@gmail.com) / [mmoham25@students.kennesaw.edu](mailto:mmoham25@students.kennesaw.edu)
-Portfolio: [http://maliknaik.me/](http://maliknaik.me/)
-LinkedIn: [https://www.linkedin.com/in/maliknaik/](https://www.linkedin.com/in/maliknaik/)
+Name: Malik Naik <br/>
+
+Email: [maliknaik16@gmail.com](mailto:maliknaik16@gmail.com) / [mmoham25@students.kennesaw.edu](mailto:mmoham25@students.kennesaw.edu) <br/>
+
+Portfolio: [http://maliknaik.me/](http://maliknaik.me/)<br/>
+
+LinkedIn: [https://www.linkedin.com/in/maliknaik/](https://www.linkedin.com/in/maliknaik/)<br/>
 
 # Reference
 
